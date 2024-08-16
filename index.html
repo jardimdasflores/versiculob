@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versículos de Motivação e Conforto</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+            background-size: cover;
+            color: #f5f5f5;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .versiculo {
+            font-size: 28px;
+            font-style: italic;
+            margin: 30px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #005f99;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #004f7a;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            color: #f5f5f5;
+        }
+
+        .oracao {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Versículo do Dia</h1>
+    <div class="versiculo" id="versiculo"></div>
+
+    <button onclick="mostrarVersiculo()">Gerar Novo Versículo</button>
+
+    <footer>
+        <p>Que o Senhor te abençoe e te guarde. Que o Senhor faça resplandecer o seu rosto sobre ti e tenha misericórdia de ti.</p>
+        <p class="oracao">Amém.</p>
+    </footer>
+
+    <audio controls autoplay loop>
+        <source src="https://www.example.com/caminho_para_musica.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script>
+        const versiculos = [
+            "O Senhor é o meu pastor; nada me faltará. - Salmos 23:1",
+            "Tudo posso naquele que me fortalece. - Filipenses 4:13",
+            "O Senhor é a minha luz e a minha salvação; de quem terei medo? - Salmos 27:1",
+            "Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento. - Provérbios 3:5",
+            "Porque eu sei os planos que tenho para vocês, diz o Senhor, planos de prosperar e não de causar dano, planos de dar a vocês esperança e um futuro. - Jeremias 29:11"
+        ];
+
+        function mostrarVersiculo() {
+            const versiculoAleatorio = versiculos[Math.floor(Math.random() * versiculos.length)];
+            document.getElementById("versiculo").innerText = versiculoAleatorio;
+        }
+
+        mostrarVersiculo();
+    </script>
+</body>
+</html>
