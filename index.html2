@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versículos de Motivação e Conforto</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+            background-size: cover;
+            color: #f5f5f5;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .versiculo {
+            font-size: 28px;
+            font-style: italic;
+            margin: 30px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #005f99;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #004f7a;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            color: #f5f5f5;
+        }
+
+        .oracao {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .form-oracao, .reflexao, .galeria, .testemunho, .social-share, .newsletter, .search {
+            margin: 30px auto;
+            max-width: 600px;
+            text-align: left;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            color: #f5f5f5;
+        }
+
+        .galeria img {
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+
+        .social-share a {
+            display: inline-block;
+            margin: 10px;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #005f99;
+            border-radius: 5px;
+        }
+
+        .social-share a:hover {
+            background-color: #004f7a;
+        }
+
+        .doar-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .doar-btn:hover {
+            background-color: #218838;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #resultados p {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Versículo do Dia</h1>
+    <div class="versiculo" id="versiculo"></div>
+    <button onclick="mostrarVersiculo()">Gerar Novo Versículo</button>
+
+    <audio controls autoplay loop>
+        <source src="https://www.example.com/caminho_para_musica.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <div class="form-oracao">
+        <h2>Envie seu Pedido de Oração</h2>
+        <form action="https://formspree.io/f/seu-email" method="POST">
+            <input type="text" name="name" placeholder="Seu Nome" required><br>
+            <textarea name="message" rows="4" placeholder="Seu Pedido de Oração" required></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div class="reflexao">
+        <h2>Reflexão do Dia</h2>
+        <p>Este versículo nos lembra da força que encontramos em Deus, mesmo nos momentos de maior dificuldade...</p>
+    </div>
+
+    <div class="galeria">
+        <h2>Galeria de Versículos</h2>
+        <img src="versiculo1.jpg" alt="Versículo 1">
+        <img src="versiculo2.jpg" alt="Versículo 2">
+    </div>
+
+    <div class="testemunho">
+        <h2>Testemunhos de Fé</h2>
+        <p>"Deus mudou minha vida quando eu menos esperava. Foi através da Sua Palavra que encontrei paz..."</p>
+        <p>- Maria Silva</p>
+    </div>
+
+    <div class="social-share">
+        <h2>Compartilhe este Versículo</h2>
+        <a href="https://facebook.com/sharer/sharer.php?u=url-do-seu-site" target="_blank">Compartilhar no Facebook</a>
+        <a href="https://twitter.com/intent/tweet?text=Versículo: texto-do-versículo" target="_blank">Compartilhar no Twitter</a>
+        <a href="https://api.whatsapp.com/send?text=Versículo: texto-do-versículo" target="_blank">Compartilhar no WhatsApp</a>
+    </div>
+
+    <div class="newsletter">
+        <h2>Assine Nossa Newsletter</h2>
+        <form action="https://formspree.io/f/seu-email" method="POST">
+            <input type="email" name="email" placeholder="Seu E-mail" required><br>
+            <button type="submit">Inscrever-se</button>
+        </form>
+    </div>
+
+    <div class="search">
+        <h2>Buscar Versículos</h2>
+        <input type="text" id="search" placeholder="Buscar versículos...">
+        <div id="resultados"></div>
+    </div>
+
+    <div class="doacao">
+        <h2>Contribua para a Nossa Missão</h2>
+        <p>Agradecemos a todos que apoiam este projeto. Se você quiser contribuir, clique no botão abaixo.</p>
+        <a href="link-para-doacao" class="doar-btn">Doar</a>
+    </div>
+
+    <footer>
+        <p>Que o Senhor te abençoe e te guarde. Que o Senhor faça resplandecer o seu rosto sobre ti e tenha misericórdia de ti.</p>
+        <p class="oracao">Amém.</p>
+    </footer>
+
+    <button onclick="toggleTheme()">Alternar Modo Claro/Escuro</button>
+
+    <script>
+        const versiculos = [
+            "O Senhor é o meu pastor; nada me faltará. - Salmos 23:1",
+            "Tudo posso naquele que me fortalece. - Filipenses 4:13",
+            "O Senhor é a minha luz e a minha salvação; de quem terei medo? - Salmos 27:1",
+            "Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento. - Provérbios 3:5",
+            "Porque eu sei os planos que tenho para vocês, diz o Senhor, planos de prosperar e não de causar dano, planos de dar a vocês esperança e um futuro. - Jeremias 29:11"
+        ];
+
+        function mostrarVersiculo() {
+            const versiculoAleatorio = versiculos[Math.floor(Math.random() * versiculos.length)];
+            document.getElementById("versiculo").innerText = versiculoAleatorio;
+        }
+
+        mostrarVersiculo();
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        document.getElementById('search').addEventListener('input', function() {
+            const busca = this.value.toLowerCase();
+            const resultados = versiculos.filter(v => v.toLowerCase().includes(busca));
+            document.getElementById('resultados').innerHTML = resultados.map(v => `<p>${v}</p>`).join('');
+        });
+    </script>
+</body>
+</html>
